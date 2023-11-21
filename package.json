@@ -11,7 +11,7 @@
     "start:api": "npm --prefix app/api start",
     "build:ui": "npm --prefix app/ui run build",
     "start:ui": "npm --prefix app/ui start",
-    "start": "run-p build:ui start:api"
+    "start": "run-p build:ui"
   },
   "devDependencies": {
     "@types/react": "^18.2.30",
