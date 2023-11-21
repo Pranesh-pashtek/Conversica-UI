@@ -46,7 +46,7 @@ export default function AppDetails() {
   function showFooter() {
     axios({
       method: "post",
-      url: "http://localhost:8080/api/appdemoauthtoken",
+      url: "http://3.16.111.70:8080/api/appdemoauthtoken",
       data: {
         cid: client,
         csecret: secret,
