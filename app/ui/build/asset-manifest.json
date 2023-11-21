@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2c005c39.css",
+    "main.js": "/static/js/main.afd4be54.js",
+    "static/media/symbols.svg": "/static/media/symbols.fb91f385eef50470ced8e910d5aaa3f5.svg",
+    "static/media/bg-info@2x.png": "/static/media/bg-info@2x.59f1b6c33ae7563bceea.png",
+    "static/media/banner-group-public-default.png": "/static/media/banner-group-public-default.502c03c164b28f5548b7.png",
+    "static/media/banner-user-default.png": "/static/media/banner-user-default.d4251dfc5e5f7164ce26.png",
+    "static/media/banner-brand-default.png": "/static/media/banner-brand-default.853be605e8ad0eac7451.png",
+    "static/media/einstein-figure.svg": "/static/media/einstein-figure.160b004e87362bdab0f7.svg",
+    "static/media/einstein-header-background.svg": "/static/media/einstein-header-background.89d89981681a11da4aea.svg",
+    "index.html": "/index.html",
+    "static/media/logo-noname.svg": "/static/media/logo-noname.6481e0b2155ed5945f02.svg"
+  },
+  "entrypoints": [
+    "static/css/main.2c005c39.css",
+    "static/js/main.afd4be54.js"
+  ]
+}
