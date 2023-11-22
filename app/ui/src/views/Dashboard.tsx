@@ -33,7 +33,7 @@ export default function Dashboard() {
         setIsLoad(true)
         axios({
             method: "post",
-            url: "http://3.16.111.70:8080/api/DEcheck",
+            url: "http://localhost:8080/api/DEcheck",
             data: {
                 sfmctoken: sfmctoken,
                 subdomain: subdomain,
@@ -47,7 +47,7 @@ export default function Dashboard() {
                 console.log("Destinations::", response);
                 axios({
                     method: "post",
-                    url: "http://3.16.111.70:8080/api/RetriveDE",
+                    url: "http://localhost:8080/api/RetriveDE",
                     data: {
                         sfmctoken: sfmctoken,
                         subdomain: subdomain,
