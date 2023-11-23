@@ -46,7 +46,7 @@ export default function ConversicaConnect() {
     function showFooter() {
         axios({
             method: "post",
-            url: "http://18.189.79.235:8080/api/conversicaauthtoken",
+            url: "https://18.189.79.235/api/conversicaauthtoken",
             data: {
                 Concid: Conclient,
                 Concsecret: Consecret,
