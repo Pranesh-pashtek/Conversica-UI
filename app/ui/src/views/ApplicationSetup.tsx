@@ -16,7 +16,6 @@ export default function AppDetails() {
   const [subdomain, setsubdomain] = useState("");
 
 
-
   const enableBtn = document.getElementById("enableBtn")!;
   const form1card = document.getElementById("form1card")!;
   const foot1 = document.getElementById("foot1")!;
@@ -73,7 +72,7 @@ export default function AppDetails() {
   }
 
 
-
+  const enable= client.length > 0 && secret.length > 0 && subdomain.length > 0;
 
   return (
     <div style={{ boxSizing: "border-box", paddingTop: "3%" }}>
@@ -202,6 +201,7 @@ export default function AppDetails() {
                     onClick={showFooter}
                     className="button12"
                     required
+                    disabled = {!enable}
                   >
                     Verify My Account
                   </Button>

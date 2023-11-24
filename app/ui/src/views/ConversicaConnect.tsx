@@ -69,7 +69,7 @@ export default function ConversicaConnect() {
                 foot2.style.display = "block";
             });
     }
-
+    const enable= Conclient.length > 0 && Consecret.length > 0;
     return (
         <div style={{ boxSizing: "border-box", paddingTop: "3%" }}>
             <div className="slds-form-element ">
@@ -191,6 +191,7 @@ export default function ConversicaConnect() {
                                         onClick={showFooter}
                                         className="button12"
                                         required
+                                        disabled={!enable}
                                     >
                                         Verify My Account
                                     </Button>
