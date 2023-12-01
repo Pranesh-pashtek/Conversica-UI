@@ -73,8 +73,8 @@ export default function Dashboard() {
             <div style={{ float: "left" }}>
                 <Sidebar />
             </div>
-            <div className="App" style={{ width: "80%", bottom: "20%" }}>
-                <Table style={{ alignItems: "center", width: "77%",textAlignLast:"center" }}>
+            <div className="App" style={{ width: "100%", bottom: "20%",paddingLeft:"27%" }}>
+                <Table style={{ alignItems: "center", maxWidth: "79%",textAlignLast:"center" }}>
                     <thead>
                         <tr>
                             {/* <th>#</th> */}
@@ -94,7 +94,7 @@ export default function Dashboard() {
                                 <td>{data.Conversation}</td>
                                 <td>{data.Contact}</td>
                             </tr>
-                        )) : <div className="demo-only demo-only_viewport" style={{ height: "6rem", position: "relative" }}>
+                        )) : <div className="demo-only demo-only_viewport" style={{ height: "6rem", position: "relative", width:"481%" }}>
                             <div role="status" className="slds-spinner slds-spinner_medium">
                                 <span className="slds-assistive-text">Loading</span>
                                 <div className="slds-spinner__dot-a"></div>
