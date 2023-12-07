@@ -89,7 +89,7 @@ code {
   padding: 1%;
   /* padding-left: 4%; */
   border-radius: 5px;
-  box-shadow: 0px 5px 5px #cbc9c9;
+  /* box-shadow: 0px 5px 5px #cbc9c9; */
   border: 1px solid #c5c5c5;
 }
 
@@ -458,8 +458,8 @@ a.Button_link1 {
 #main-card {
   /* margin-top: 1%; */
   /* background: #e5e8f1; */
-  border: 0;
-  /* box-shadow: none; */
+  /* border: 0; */
+  box-shadow: none;
   font-size: large
 }
 
@@ -504,3 +504,12 @@ b.hed {
   padding-left: 2%;
   display: inline-flex;
 }
+
+/* .sideBar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 50px 0 0;
+} */

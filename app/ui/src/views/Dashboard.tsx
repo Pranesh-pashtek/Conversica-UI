@@ -3,6 +3,7 @@ import Sidebar from "./sidebar";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import Table from 'react-bootstrap/Table';
+import { Row, Col } from 'react-bootstrap';
 
 export default function Dashboard() {
 
@@ -54,10 +55,15 @@ export default function Dashboard() {
                     },
                 })
                     .then(function (response) {
-                        console.log("RetriveDE::", response.data);
-                        setList(response.data.Data)
+                        if(response.data=="No Records"){
+                        console.log("RetriveDE[If]:::::::::::::::::::::::::::::::::", response.data);
+                        setList([{Name:"null",Skills:"null",Type:"null",Conversation:"null",Contact:"null"}]) //[{Name:"",Skills:"",Type:"",Conversation:"",Contact:""}]
                         setIsLoad(false)
-
+                        }else{
+                            console.log("RetriveDE[ELSE]:::::::::::::::::::::::::::::::::", response.data);
+                            setList(response.data.Data)
+                            setIsLoad(false)
+                        }
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -70,11 +76,15 @@ export default function Dashboard() {
 
     return (
         <div>
-            <div style={{ float: "left" }}>
+            <Row style={{ marginRight:"0px" }}>
+                <Col className="col-2">
+            <div className="sideBar" style={{ float: "left" }}>
                 <Sidebar />
             </div>
-            <div className="App" style={{ width: "100%", bottom: "20%",paddingLeft:"27%" }}>
-                <Table style={{ alignItems: "center", maxWidth: "79%",textAlignLast:"center" }}>
+            </Col>
+            <Col className="col-10">
+            <div className="App">
+                <Table style={{ alignItems: "center",textAlignLast:"center" }} >
                     <thead>
                         <tr>
                             {/* <th>#</th> */}
@@ -84,8 +94,8 @@ export default function Dashboard() {
                             <th>Conversation</th>
                             <th>Contact</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                    </thead>                    
+                    <tbody >
                         {List.length > 0 ? List?.map((data: any) => (
                             <tr>
                                 <td>{data.Name}</td>
@@ -104,6 +114,8 @@ export default function Dashboard() {
                     </tbody>
                 </Table>
             </div>
+            </Col>
+        </Row>
         </div>
     );
 }
