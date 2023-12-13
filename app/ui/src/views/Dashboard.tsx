@@ -30,6 +30,8 @@ export default function Dashboard() {
     const urlParams = new URLSearchParams(queryString);
     const refreshtoken = urlParams.get('rt');
     const SubDomain = urlParams.get('subdomain');
+    console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
+    console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
             setIsLoad(true);
     if(state==null){
  setTimeout(() => { 
