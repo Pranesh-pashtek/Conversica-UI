@@ -6,6 +6,13 @@ import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
 
 export default function Dashboard() {
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const refreshtoken = urlParams.get('rt');
+    const SubDomain = urlParams.get('subdomain');
+   
+
     const loc = useLocation();
     const [List, setList]: any = useState([]);
     const [isLoad, setIsLoad] = useState(false);
@@ -26,15 +33,14 @@ export default function Dashboard() {
     console.log("STATE::::::::::::::::::::::::::::::::::::::",state);
     
     useEffect(() => {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const refreshtoken = urlParams.get('rt');
-    const SubDomain = urlParams.get('subdomain');
-    console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
-    console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
+        // setTimeout(() => { 
+    
+
             setIsLoad(true);
     if(state==null){
-//  setTimeout(() => { 
+        console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
+        console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
+ setTimeout(() => { 
     axios({
         method: "post",
         url: "https://18.189.79.235/api/RetriveDE",
@@ -60,7 +66,8 @@ export default function Dashboard() {
         });
        
     
-        // }, 3000);
+        }, 5000);
+        
     }else{
             setIsLoad(true)
             axios({
