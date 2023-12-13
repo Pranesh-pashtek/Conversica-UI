@@ -34,7 +34,7 @@ export default function Dashboard() {
     console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
             setIsLoad(true);
     if(state==null){
- setTimeout(() => { 
+//  setTimeout(() => { 
     axios({
         method: "post",
         url: "https://18.189.79.235/api/RetriveDE",
@@ -60,7 +60,7 @@ export default function Dashboard() {
         });
        
     
-        }, 3000);
+        // }, 3000);
     }else{
             setIsLoad(true)
             axios({
