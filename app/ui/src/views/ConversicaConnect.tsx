@@ -17,6 +17,8 @@ export default function ConversicaConnect() {
         secret: any;
         sfmctoken: String;
         subdomain: String;
+        WEBAPPSubDomain:string;
+        WEBAPPrefreshtoken:string;
     }
     const loc = useLocation();
     const state = loc.state as CustomisedState;
@@ -24,6 +26,8 @@ export default function ConversicaConnect() {
     const secret = state.secret;
     const sfmctoken = state.sfmctoken;
     const subdomain = state.subdomain;
+const WEBAPPSubDomain = state.WEBAPPSubDomain;
+const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
 
     const enableBtn = document.getElementById("enableBtn")!;
     const form1card = document.getElementById("form1card")!;
@@ -46,7 +50,7 @@ export default function ConversicaConnect() {
     function showFooter() {
         axios({
             method: "post",
-            url: "https://18.189.79.235/api/conversicaauthtoken",
+            url: "/api/conversicaauthtoken",
             data: {
                 Concid: Conclient,
                 Concsecret: Consecret,
@@ -69,7 +73,7 @@ export default function ConversicaConnect() {
                 foot2.style.display = "block";
             });
     }
-    const enable= Conclient.length > 0 && Consecret.length > 0;
+
     return (
         <div style={{ boxSizing: "border-box", paddingTop: "0%" }}>
             <div className="slds-form-element ">
@@ -124,7 +128,7 @@ export default function ConversicaConnect() {
                         </div>
 
                         <div className="Set">
-                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic"}}>
+                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic", boxShadow: "0px 5px 5px #cbc9c9" }}>
                                 <img src={logo} width={120} />
                                 <div className="text" style={{ verticalAlign: "text-top" }}>
                                     <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -191,7 +195,6 @@ export default function ConversicaConnect() {
                                         onClick={showFooter}
                                         className="button12"
                                         required
-                                        disabled={!enable}
                                     >
                                         Verify My Account
                                     </Button>
@@ -300,7 +303,9 @@ export default function ConversicaConnect() {
                                             subdomain: subdomain,
                                             sfmctoken: sfmctoken,
                                             client: client,
-                                            secret: secret
+                                            secret: secret,
+                                            WEBAPPSubDomain:WEBAPPSubDomain,
+                                            WEBAPPrefreshtoken:WEBAPPrefreshtoken
                                         }}
                                     >
                                         Next

@@ -9,6 +9,13 @@ import logo from "../assets/images/Picture1.png"
 
 
 export default function AppDetails() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const WEBAPPrefreshtoken = urlParams.get('rt');
+  const WEBAPPSubDomain = urlParams.get('subdomain');
+
+console.log("WED-APP_cookies : : : : : :",WEBAPPrefreshtoken);
+console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
 
   const [sfmctoken, setsfmctoken] = useState("");
   const [client, setclientid] = useState("");
@@ -45,7 +52,7 @@ export default function AppDetails() {
   function showFooter() {
     axios({
       method: "post",
-      url: "https://18.189.79.235/api/appdemoauthtoken",
+      url: "/api/appdemoauthtoken",
       data: {
         cid: client,
         csecret: secret,
@@ -53,10 +60,6 @@ export default function AppDetails() {
       },
     })
       .then(function (response) {
-
-        console.log(
-          "accesstokengeneration:" + JSON.stringify(response.data)
-        );
         getsfmctoken(response.data.access_token);
         enableBtn.style.pointerEvents = "";
         form1card.style.paddingBottom = "0%";
@@ -74,9 +77,9 @@ export default function AppDetails() {
 
   const enable= client.length > 0 && secret.length > 0 && subdomain.length > 0;
 
+
   return (
     <div style={{ boxSizing: "border-box", paddingTop: "0%" }}>
-      {/* <h1></h1> */}
       <div className="slds-form-element ">
         <div className="slds-m-top_xxx-large">
           <div className=" slds-box slds-theme_default ">
@@ -128,7 +131,7 @@ export default function AppDetails() {
 
 
             <div className="Set">
-              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic" }}>
+              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic"}}>
                 <img src={logo} width={120} />
                 <div className="text" style={{ verticalAlign: "text-top" }}>
                   <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -300,7 +303,9 @@ export default function AppDetails() {
                       client: client,
                       secret: secret,
                       subdomain: subdomain,
-                      sfmctoken: sfmctoken
+                      sfmctoken: sfmctoken,
+                      WEBAPPrefreshtoken: WEBAPPrefreshtoken,
+                      WEBAPPSubDomain: WEBAPPSubDomain
                     }}
                   >
                     Next

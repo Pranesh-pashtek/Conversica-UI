@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { useLocation } from "react-router-dom";
 import logo from "../assets/images/Picture1.png"
 
 
@@ -14,6 +13,8 @@ export default function Review() {
         subdomain: String;
         Concid: String;
         Concsecret: String;
+        WEBAPPSubDomain:string;
+        WEBAPPrefreshtoken:string;
     }
     const loc = useLocation();
     const state = loc.state as CustomisedState;
@@ -23,6 +24,9 @@ export default function Review() {
     const Concsecret = state.Concsecret;
     const sfmctoken = state.sfmctoken;
     const subdomain = state.subdomain;
+    const WEBAPPSubDomain = state.WEBAPPSubDomain;
+const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
+
     return (
         <div style={{ boxSizing: "border-box", paddingTop: "0%" }}>
             <div className="slds-form-element ">
@@ -144,14 +148,16 @@ export default function Review() {
                                         Back
                                     </Link>
                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <Link className="Button_link" to="/Dashboard"
-                                        state={{
+                                    <Link className="Button_link"  to="/dashboard" 
+                                        state={{                                            
                                             Concid: Concid,
                                             Concsecret: Concsecret,
                                             subdomain: subdomain,
                                             sfmctoken: sfmctoken,
                                             client: client,
-                                            secret: secret
+                                            secret: secret,
+                                            WEBAPPSubDomain:WEBAPPSubDomain,
+                                            WEBAPPrefreshtoken:WEBAPPrefreshtoken
                                         }}
                                     >
                                         Done
