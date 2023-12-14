@@ -50,7 +50,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
     function showFooter() {
         axios({
             method: "post",
-            url: `${process.env.SELF_DOMAIN}/api/conversicaauthtoken`,
+            url: `/api/conversicaauthtoken`,
             data: {
                 Concid: Conclient,
                 Concsecret: Consecret,

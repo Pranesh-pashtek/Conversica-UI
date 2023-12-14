@@ -46,7 +46,7 @@ export default function Dashboard() {
 //     console.log("DashboardrefSubDomain::::::::::::::::22222"+SubDomain);
     axios({
         method: "post",
-        url: `${process.env.SELF_DOMAIN}/api/RetriveDE`,
+        url: `/api/RetriveDE`,
         data: {
             refreshToken: refreshtoken,
             subdomain: SubDomain,
@@ -75,7 +75,7 @@ export default function Dashboard() {
             setIsLoad(true)
             axios({
                 method: "post",
-                url: `${process.env.SELF_DOMAIN}/api/DEcheck`,
+                url: `/api/DEcheck`,
                 data: {
                     sfmctoken: state.sfmctoken,
                 subdomain: state.subdomain,
@@ -92,7 +92,7 @@ export default function Dashboard() {
                     const REFToken = response.data.RefToken;
             axios({
                 method: "post",
-                url: `${process.env.SELF_DOMAIN}/api/RetriveDE`,
+                url: `/api/RetriveDE`,
                 data: {
                     refreshToken: REFToken,
                     subdomain: state.WEBAPPSubDomain,
