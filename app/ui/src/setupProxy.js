@@ -4,7 +4,7 @@ module.exports = function (app) {
     app.use(
         "/oauth2",
         createProxyMiddleware({
-            target: "https://app.localhost:",
+            target: `${process.env.SELF_DOMAIN}`,
             changeOrigin: true,
             secure: false,
         })
@@ -13,7 +13,7 @@ module.exports = function (app) {
     app.use(
         "/api",
         createProxyMiddleware({
-            target: "https://app.localhost:",
+            target: `${process.env.SELF_DOMAIN}`,
             changeOrigin: true,
             secure: false,
         })
