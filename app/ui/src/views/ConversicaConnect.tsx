@@ -9,7 +9,7 @@ import { UtilityIcon } from "../components/icons/UtilityIcon";
 import logo from "../assets/images/Picture1.png"
 
 export default function ConversicaConnect() {
-const URL = process.env.BACKEND_URL;
+
     const [Conclient, setConclientid] = useState("");
     const [Consecret, setConsecret] = useState("");
     interface CustomisedState {
@@ -50,7 +50,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
     function showFooter() {
         axios({
             method: "post",
-            url: URL+"/api/conversicaauthtoken",
+            url: "https://18.189.79.235/api/conversicaauthtoken",
             data: {
                 Concid: Conclient,
                 Concsecret: Consecret,

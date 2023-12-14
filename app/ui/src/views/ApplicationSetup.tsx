@@ -53,7 +53,7 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
     const URL = process.env.BACKEND_URL;
     axios({
       method: "post",
-      url: URL+"/api/appdemoauthtoken",
+      url: "https://18.189.79.235/api/appdemoauthtoken",
       data: {
         cid: client,
         csecret: secret,
