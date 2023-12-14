@@ -52,7 +52,7 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
   function showFooter() {
     axios({
       method: "post",
-      url: `/api/appdemoauthtoken`,
+      url: `${process.env.BACKEND_URL}/api/appdemoauthtoken`,
       data: {
         cid: client,
         csecret: secret,
