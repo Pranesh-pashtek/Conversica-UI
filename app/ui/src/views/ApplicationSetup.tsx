@@ -50,9 +50,10 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
     setsfmctoken(e);
   };
   function showFooter() {
+    const URL = process.env.BACKEND_URL;
     axios({
       method: "post",
-      url: "https://18.189.79.235/api/appdemoauthtoken",
+      url: URL+"/api/appdemoauthtoken",
       data: {
         cid: client,
         csecret: secret,

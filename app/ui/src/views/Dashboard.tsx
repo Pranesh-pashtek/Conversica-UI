@@ -5,11 +5,8 @@ import axios from "axios";
 import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
 
-export default function Dashboard() {
-    
-    
-   
-
+export default function Dashboard() {  
+    const URL = process.env.BACKEND_URL;
     const loc = useLocation();
     const [List, setList]: any = useState([]);
     const [isLoad, setIsLoad] = useState(false);
@@ -46,7 +43,7 @@ export default function Dashboard() {
 //     console.log("DashboardrefSubDomain::::::::::::::::22222"+SubDomain);
     axios({
         method: "post",
-        url: "https://18.189.79.235/api/RetriveDE",
+        url: URL+"/api/RetriveDE",
         data: {
             refreshToken: refreshtoken,
             subdomain: SubDomain,
@@ -75,7 +72,7 @@ export default function Dashboard() {
             setIsLoad(true)
             axios({
                 method: "post",
-                url: "https://18.189.79.235/api/DEcheck",
+                url: URL+"/api/DEcheck",
                 data: {
                     sfmctoken: state.sfmctoken,
                 subdomain: state.subdomain,
@@ -92,7 +89,7 @@ export default function Dashboard() {
                     const REFToken = response.data.RefToken;
             axios({
                 method: "post",
-                url: "https://18.189.79.235/api/RetriveDE",
+                url: URL+"/api/RetriveDE",
                 data: {
                     refreshToken: REFToken,
                     subdomain: state.WEBAPPSubDomain,
