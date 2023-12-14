@@ -26,14 +26,14 @@ function App() {
                                 <Route path='/' element={<AppDetails />} />
                                 <Route path='/ReviewSetup' element={<Review />} />
                                 <Route path='/ConversicaConnect' element={<ConversicaConnect />} />
+                                <Route path='/Dashboard' element={<Dashboard />} />
                             </Routes>
                         </div>
                     </Container>
                 </div>
             </div>
             <div>
-                <Routes>
-                    <Route path='/Dashboard' element={<Dashboard />} />
+                <Routes>                    
                     <Route path='/sidebar' element={<Sidebar />} />
                 </Routes>
             </div>
