@@ -7,10 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 
 export default function Dashboard() {
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const refreshtoken = urlParams.get('rt');
-    const SubDomain = urlParams.get('subdomain');
+    
    
 
     const loc = useLocation();
@@ -38,6 +35,10 @@ export default function Dashboard() {
 
             setIsLoad(true);
     if(state==null){
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const refreshtoken = urlParams.get('rt');
+        const SubDomain = urlParams.get('subdomain');
         console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
         console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
  setTimeout(() => { 
@@ -50,7 +51,8 @@ export default function Dashboard() {
         },
     })
         .then(function (response) {
-            
+            console.log("Dashboardrefreshtoken::::::::::::::::2222"+refreshtoken);
+        console.log("DashboardrefSubDomain::::::::::::::::22222"+SubDomain);
             if(response.data=="No Records"){
             console.log("RetriveDE[If]:::::::::::::::::::::::::::::::::", response.data);
             setList([{Name:"null",Skills:"null",Type:"null",Conversation:"null",Contact:"null"}]) //[{Name:"",Skills:"",Type:"",Conversation:"",Contact:""}]
