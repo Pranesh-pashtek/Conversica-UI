@@ -6,12 +6,7 @@ import Table from 'react-bootstrap/Table';
 import { Row, Col } from 'react-bootstrap';
 
 export default function Dashboard() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const refreshtoken = urlParams.get('rt');
-    const SubDomain = urlParams.get('subdomain');
-    console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
-    console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
+    
     
    
 
@@ -40,10 +35,15 @@ export default function Dashboard() {
 
             setIsLoad(true);
     if(state==null){
-        
- setTimeout(() => { 
-    console.log("Dashboardrefreshtoken::::::::::::::::2222"+refreshtoken);
-    console.log("DashboardrefSubDomain::::::::::::::::22222"+SubDomain);
+        const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const refreshtoken = urlParams.get('rt');
+    const SubDomain = urlParams.get('subdomain');
+    console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
+    console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
+//  setTimeout(() => { 
+//     console.log("Dashboardrefreshtoken::::::::::::::::2222"+refreshtoken);
+//     console.log("DashboardrefSubDomain::::::::::::::::22222"+SubDomain);
     axios({
         method: "post",
         url: "https://18.189.79.235/api/RetriveDE",
@@ -69,7 +69,7 @@ export default function Dashboard() {
         });
        
     
-        }, 5000);
+        // }, 5000);
         
     }else{
             setIsLoad(true)
