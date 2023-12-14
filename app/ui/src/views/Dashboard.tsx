@@ -35,13 +35,14 @@ export default function Dashboard() {
 
             setIsLoad(true);
     if(state==null){
-        const queryString = window.location.search;
+        
+ setTimeout(() => { 
+    const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const refreshtoken = urlParams.get('rt');
         const SubDomain = urlParams.get('subdomain');
         console.log("Dashboardrefreshtoken::::::::::::::::"+refreshtoken);
         console.log("DashboardrefSubDomain::::::::::::::::"+SubDomain);
- setTimeout(() => { 
     axios({
         method: "post",
         url: "https://18.189.79.235/api/RetriveDE",
