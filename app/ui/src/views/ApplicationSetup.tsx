@@ -14,8 +14,8 @@ export default function AppDetails() {
   const WEBAPPrefreshtoken = urlParams.get('rt');
   const WEBAPPSubDomain = urlParams.get('subdomain');
 
-console.log("WED-APP_cookies : : : : : :",WEBAPPrefreshtoken);
-console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
+  console.log("WED-APP_cookies : : : : : :", WEBAPPrefreshtoken);
+  console.log("WED-APP_SUBDomain::::::::::", WEBAPPSubDomain);
 
   const [sfmctoken, setsfmctoken] = useState("");
   const [client, setclientid] = useState("");
@@ -76,7 +76,7 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
   }
 
 
-  const enable= client.length > 0 && secret.length > 0 && subdomain.length > 0;
+  const enable = client.length > 0 && secret.length > 0 && subdomain.length > 0;
 
 
   return (
@@ -84,7 +84,6 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
       <div className="slds-form-element ">
         <div className="slds-m-top_xxx-large">
           <div className=" slds-box slds-theme_default ">
-
             <div className="slds-path">
               <div className="slds-grid slds-path__track">
                 <div className="slds-grid slds-path__scroller-container">
@@ -132,7 +131,7 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
 
 
             <div className="Set">
-              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic"}}>
+              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic" }}>
                 <img src={logo} width={120} />
                 <div className="text" style={{ verticalAlign: "text-top" }}>
                   <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -205,7 +204,7 @@ console.log("WED-APP_SUBDomain::::::::::",WEBAPPSubDomain);
                     onClick={showFooter}
                     className="button12"
                     required
-                    disabled = {!enable}
+                    disabled={!enable}
                   >
                     Verify My Account
                   </Button>

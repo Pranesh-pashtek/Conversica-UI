@@ -9,9 +9,7 @@ export default function Sidebar() {
             <div style={{ background: "#0f0c28", paddingBottom:"300%" }}>
                         <p style={{textAlign: "center", marginTop: "10%", fontSize: "25px"}}><FaLink /> Conversica</p>
                 <Menu style={{ marginBottom: "160%" }}>
-                    <MenuItem>
-                        Assistants <Link to="/" />
-                    </MenuItem>
+                    <MenuItem>Assistants</MenuItem>
                     <div className="linesb"></div>
                     <MenuItem>Skills</MenuItem>
                     <div className="linesb"></div>

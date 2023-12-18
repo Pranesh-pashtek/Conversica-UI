@@ -77,11 +77,8 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
     return (
         <div style={{ boxSizing: "border-box", paddingTop: "0%" }}>
             <div className="slds-form-element ">
-
-
                 <div className="slds-m-top_xxx-large">
                     <div className=" slds-box slds-theme_default ">
-
                         <div className="slds-path">
                             <div className="slds-grid slds-path__track">
                                 <div className="slds-grid slds-path__scroller-container">
