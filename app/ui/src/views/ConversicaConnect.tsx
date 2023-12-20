@@ -278,7 +278,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                                 <form>
                                     <Link
                                         className="Button_link1"
-                                        to="/"
+                                        to={`/?rt=${WEBAPPrefreshtoken}+&subdomain=${WEBAPPSubDomain}`}
                                         state={{
                                             Concid: Conclient,
                                             Concsecret: Consecret,

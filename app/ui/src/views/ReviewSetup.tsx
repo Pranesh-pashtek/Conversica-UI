@@ -143,6 +143,8 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                                             sfmctoken: sfmctoken,
                                             client: client,
                                             secret: secret,
+                                            WEBAPPSubDomain:WEBAPPSubDomain,
+                                            WEBAPPrefreshtoken:WEBAPPrefreshtoken
                                         }}
                                     >
                                         Back
