@@ -29,12 +29,16 @@ root.render(
         standardSprite={standardSprite}
         utilitySprite={utilitySprite}
     >
+        <div>
+        <meta http-equiv="Content-Security-Policy" 
+          content="...policy definition here..." />
+        </div>
         <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="*" element={<App />}></Route>
-            </Routes>
-        </BrowserRouter>
-        </React.StrictMode>       
+            <BrowserRouter>
+                <Routes>
+                    <Route path="*" element={<App />}></Route>
+                </Routes>
+            </BrowserRouter>
+        </React.StrictMode>
     </IconSettings>
 );

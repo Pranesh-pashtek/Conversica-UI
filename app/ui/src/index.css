@@ -90,7 +90,7 @@ code {
   /* padding-left: 4%; */
   border-radius: 5px;
   /* box-shadow: 0px 5px 5px #cbc9c9; */
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d7d7d7;
 }
 
 #foot1 {
@@ -167,9 +167,11 @@ div#foot2 {
   padding: 1%;
   background: transparent;
   /* background-color: #e5e8f1; */
-  border: 1px solid #c5c5c5;
+  border: 1px solid #d7d7d7;
   padding-top: 0%;
   padding-bottom: 0%;
+  box-shadow: none;
+
 }
 
 #btnNext {
@@ -460,7 +462,8 @@ a.Button_link1 {
   /* background: #e5e8f1; */
   /* border: 0; */
   box-shadow: none;
-  font-size: large
+  font-size: large;
+  color: #767171;
 }
 
 ul.slds-path__nav {

@@ -17,8 +17,8 @@ export default function ConversicaConnect() {
         secret: any;
         sfmctoken: String;
         subdomain: String;
-        WEBAPPSubDomain:string;
-        WEBAPPrefreshtoken:string;
+        WEBAPPSubDomain: string;
+        WEBAPPrefreshtoken: string;
     }
     const loc = useLocation();
     const state = loc.state as CustomisedState;
@@ -26,8 +26,8 @@ export default function ConversicaConnect() {
     const secret = state.secret;
     const sfmctoken = state.sfmctoken;
     const subdomain = state.subdomain;
-const WEBAPPSubDomain = state.WEBAPPSubDomain;
-const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
+    const WEBAPPSubDomain = state.WEBAPPSubDomain;
+    const WEBAPPrefreshtoken = state.WEBAPPrefreshtoken;
 
     const enableBtn = document.getElementById("enableBtn")!;
     const form1card = document.getElementById("form1card")!;
@@ -125,7 +125,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                         </div>
 
                         <div className="Set">
-                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic"}}>
+                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", fontStyle: "italic" }}>
                                 <img src={logo} width={120} />
                                 <div className="text" style={{ verticalAlign: "text-top" }}>
                                     <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -142,7 +142,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                             className="cardsec form1"
                             style={{ paddingBottom: "6%" }}
                         >
-                            <Card id="main-card" heading="" className="slds-text-heading_small  slds-m-left_x-small slds-p-left_x-small slds-truncate" style={{ border: "1px solid #c5c5c5", }}>
+                            <Card id="main-card" heading="" className="slds-text-heading_small  slds-m-left_x-small slds-p-left_x-small slds-truncate" style={{ border: "1px solid #d7d7d7", }}>
                                 Conversica API DETAILS
                             </Card>
                             <br></br>
@@ -200,14 +200,16 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
 
                             <div id="foot1" style={{ paddingBottom: "5%" }}>
                                 <div className="slds-notify_container slds-is-relative">
-                                    <div className="slds-notify slds-notify_toast slds-theme_success" role="status" style={{ width: "27%" }}>
+                                    <div className="slds-notify slds-notify_toast slds-theme_success" role="status" style={{ width: "max-content", justifyContent: "center" }}>
                                         <span className="slds-assistive-text">error</span>
                                         <span className="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
-                                            <svg className="slds-icon slds-icon_small" aria-hidden="true">
-                                            </svg>
+                                            <UtilityIcon
+                                                svgClass="slds-icon slds-icon_small"
+                                                iconName="success"
+                                            />
                                         </span>
                                         <div className="slds-notify__content">
-                                            <h2 className="slds-text-heading_small ">CONVERSICA API SUCCESSFULLY CONNECTED</h2>
+                                            <h2 className="slds-text-heading_small " style={{ textAlign: "center", maxWidth: "fit-content", marginRight: "20px" }} >CONVERSICA API SUCCESSFULLY CONNECTED</h2>
                                         </div>
                                         <div className="slds-notify__close">
                                             <Button
@@ -238,18 +240,21 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                             <div id="foot2" style={{ paddingBottom: "5%" }}>
                                 <br></br>
                                 <div className="slds-notify_container slds-is-relative">
-                                    <div className="slds-notify slds-notify_toast slds-theme_error" role="status">
+                                    <div className="slds-notify slds-notify_toast slds-theme_error" role="status" style={{ width: "max-content", justifyContent: "center" }}>
                                         <span className="slds-assistive-text">error</span>
                                         <span className="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
-                                            <svg className="slds-icon slds-icon_small" aria-hidden="true">
-                                            </svg>
+                                            <UtilityIcon
+                                                svgClass="slds-icon slds-icon_small"
+                                                iconName="error"
+                                            />
                                         </span>
                                         <div className="slds-notify__content">
-                                            <h2 className="slds-text-heading_small ">Please enter the valid Conversica credentials.</h2>
+                                            <h2 className="slds-text-heading_small" style={{ textAlign: "center", maxWidth: "fit-content" }}>Please enter the valid Conversica credentials.</h2>
                                         </div>
                                         <div className="slds-notify__close">
                                             <Button
                                                 onClick={(e: any) => {
+                                                    window.location.reload();
                                                     foot2.style.opacity = "0%";
                                                 }}
                                                 style={{
@@ -301,8 +306,8 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                                             sfmctoken: sfmctoken,
                                             client: client,
                                             secret: secret,
-                                            WEBAPPSubDomain:WEBAPPSubDomain,
-                                            WEBAPPrefreshtoken:WEBAPPrefreshtoken
+                                            WEBAPPSubDomain: WEBAPPSubDomain,
+                                            WEBAPPrefreshtoken: WEBAPPrefreshtoken
                                         }}
                                     >
                                         Next

@@ -80,7 +80,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                         </div>
 
                         <div className="Set">
-                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic" }}>
+                            <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", fontStyle: "italic" }}>
                                 <img src={logo} width={120} />
                                 <div className="text" style={{ verticalAlign: "text-top" }}>
                                     <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -96,7 +96,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                             style={{ paddingBottom: "6%" }}
                         >
                             <div>
-                                <Card.Title id="main-card" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", padding: "10px" }}>CONFIGURATION REVIEW</Card.Title>
+                                <Card.Title id="main-card" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", padding: "10px" }}>CONFIGURATION REVIEW</Card.Title>
                                 <form>
                                     <div className="slds-clearfix slds-m-top_xxx-large ">
                                         <div>

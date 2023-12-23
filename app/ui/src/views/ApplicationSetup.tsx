@@ -131,7 +131,7 @@ export default function AppDetails() {
 
 
             <div className="Set">
-              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #c5c5c5", borderRadius: "5px", fontStyle: "italic" }}>
+              <div className="image" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", fontStyle: "italic" }}>
                 <img src={logo} width={120} />
                 <div className="text" style={{ verticalAlign: "text-top" }}>
                   <h1 style={{ color: "#78716F", fontWeight: "900", fontSize: "65px", fontFamily: "monospace", marginTop: "-10px" }}>4</h1>
@@ -146,7 +146,7 @@ export default function AppDetails() {
               className="cardsec form1"
               style={{ paddingBottom: "6%" }}
             >
-              <Card id="main-card" heading="" className="slds-text-heading_small  slds-m-left_x-small slds-p-left_x-small slds-truncate" style={{ border: "1px solid #c5c5c5", }}>
+              <Card id="main-card" heading="" className="slds-text-heading_small  slds-m-left_x-small slds-p-left_x-small slds-truncate" style={{ border: "1px solid #d7d7d7", }}>
                 Server 2 Server Application Details
               </Card>
               <form>
@@ -214,7 +214,7 @@ export default function AppDetails() {
               <div id="foot1" style={{ paddingBottom: "5%" }}>
                 <br></br>
                 <div className="slds-notify_container slds-is-relative">
-                  <div className="slds-notify slds-notify_toast slds-theme_success" role="status" style={{ width: "30%" }}>
+                  <div className="slds-notify slds-notify_toast slds-theme_success" role="status" style={{ width: "max-content", justifyContent: "center" }}>
                     <span className="slds-assistive-text">success</span>
                     <span className="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
                       <UtilityIcon
@@ -223,7 +223,7 @@ export default function AppDetails() {
                       />
                     </span>
                     <div className="slds-notify__content">
-                      <h2 className="slds-text-heading_small ">SERVER 2 SERVER APP SUCCESSFULLY CONNECTED</h2>
+                      <h2 className="slds-text-heading_small" style={{ textAlign: "center", maxWidth: "fit-content", marginRight: "20px" }}>SERVER 2 SERVER APP SUCCESSFULLY CONNECTED</h2>
                     </div>
                     <div className="slds-notify__close">
                       <Button
@@ -254,7 +254,7 @@ export default function AppDetails() {
               <div id="foot2" style={{ paddingBottom: "4.2%" }}>
                 <br></br>
                 <div className="slds-notify_container slds-is-relative">
-                  <div className="slds-notify slds-notify_toast slds-theme_error" role="status">
+                  <div className="slds-notify slds-notify_toast slds-theme_error" role="status" style={{ width: "max-content", justifyContent: "center", paddingLeft: "0px" }}>
                     <span className="slds-assistive-text">error</span>
                     <span className="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
                       <UtilityIcon
@@ -263,11 +263,12 @@ export default function AppDetails() {
                       />
                     </span>
                     <div className="slds-notify__content">
-                      <h2 className="slds-text-heading_small ">Please enter the valid SFMC credentials.</h2>
+                      <h2 className="slds-text-heading_small" style={{ textAlign: "center", maxWidth: "fit-content", marginRight: "-20px" }}>Please enter the valid SFMC credentials.</h2>
                     </div>
                     <div className="slds-notify__close">
                       <Button
                         onClick={(e: any) => {
+                          window.location.reload();
                           foot2.style.opacity = "0%";
                         }}
                         style={{
