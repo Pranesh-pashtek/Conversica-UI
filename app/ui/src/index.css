@@ -85,7 +85,7 @@ code {
   font-weight: 600;
   font-size: 15px !important;
   text-align: left;
-  color: rgb(7, 16, 111);
+  color: #797e9b;
   padding: 1%;
   /* padding-left: 4%; */
   border-radius: 5px;
@@ -225,6 +225,7 @@ div#foot2 {
   letter-spacing: 1px;
   width: 50%;
   display: table-cell;
+  padding-left: 7px;
 }
 
 .rvw2 {

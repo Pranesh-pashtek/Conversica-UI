@@ -254,6 +254,7 @@ export default function ConversicaConnect() {
                                         <div className="slds-notify__close">
                                             <Button
                                                 onClick={(e: any) => {
+                                                    // window.location.reload();
                                                     foot2.style.opacity = "0%";
                                                 }}
                                                 style={{

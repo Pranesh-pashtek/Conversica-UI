@@ -96,7 +96,7 @@ const WEBAPPrefreshtoken =state.WEBAPPrefreshtoken;
                             style={{ paddingBottom: "6%" }}
                         >
                             <div>
-                                <Card.Title id="main-card" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", padding: "10px" }}>CONFIGURATION REVIEW</Card.Title>
+                                <Card.Title id="main-card" style={{ textAlign: "start", marginBottom: "12px", border: "1px solid #d7d7d7", borderRadius: "5px", padding: "10px" }}><b style={{ fontWeight:"bolder"}}>CONFIGURATION REVIEW</b></Card.Title>
                                 <form>
                                     <div className="slds-clearfix slds-m-top_xxx-large ">
                                         <div>

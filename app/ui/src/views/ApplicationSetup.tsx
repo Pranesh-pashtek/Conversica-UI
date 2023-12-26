@@ -147,7 +147,7 @@ export default function AppDetails() {
               style={{ paddingBottom: "6%" }}
             >
               <Card id="main-card" heading="" className="slds-text-heading_small  slds-m-left_x-small slds-p-left_x-small slds-truncate" style={{ border: "1px solid #d7d7d7", }}>
-                Server 2 Server Application Details
+              SFMC - SERVER 2 SERVER APPLICATIOPN DETAILS
               </Card>
               <form>
                 <div className="slds-clearfix slds-m-top_xxx-large ">
